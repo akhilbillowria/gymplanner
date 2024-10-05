@@ -1,0 +1,428 @@
+/* src/styles/Dashboard.css */
+
+/* General Dashboard Container */
+.dashboard-container {
+  position: relative;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-container.dark {
+  background-color: #1c1c1c;
+}
+
+/* Dark Mode Modal Styling */
+.dark-modal .modal-content {
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+}
+
+.dark-modal .modal-header,
+.dark-modal .modal-footer {
+  border-color: #444;
+}
+
+.dark-modal .modal-title {
+  color: #f0f0f0;
+}
+
+.dark-modal .modal-body {
+  color: #ddd;
+}
+
+.dark-modal .btn-secondary {
+  background-color: #444;
+  color: #f0f0f0;
+  border: none;
+}
+
+.dark-modal .btn-secondary:hover {
+  background-color: #555;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.dark-mode-toggle .btn {
+  border-radius: 50%;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.dark-mode-toggle .btn:hover {
+  background-color: #333;
+}
+
+/* Dashboard Header */
+.dashboard-content {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.dashboard-title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.dashboard-container.dark .dashboard-title {
+  color: #f0f0f0;
+}
+
+/* Motivational Quotes */
+.dashboard-container .motivational-quotes {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.dashboard-container.dark .motivational-quotes {
+  color: #ccc;
+}
+
+/* Statistics Section */
+.stat-card {
+  border: none;
+  border-radius: 15px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container.dark .stat-card {
+  background-color: #2c2c2c;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+  background-color: #ff6b6b;
+  color: #ffffff;
+}
+
+.stat-icon {
+  color: #ff6b6b;
+}
+.stat-card:hover .stat-icon {
+  color: #ffffff;
+}
+.dashboard-container.dark .stat-icon {
+  color: #ff6b6b;
+}
+
+.stat-card h3 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.dashboard-container.dark .stat-card h3 {
+  color: #f0f0f0;
+}
+
+.stat-card p {
+  margin-top: 10px;
+  color: inherit;
+}
+
+.dashboard-container.dark .stat-card p {
+  color: #ccc;
+}
+
+/* Action Cards (Services & Products) */
+.action-card {
+  border: none;
+  border-radius: 15px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container.dark .action-card {
+  background-color: #2c2c2c;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.action-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+  background-color: #ff6b6b;
+  color: #ffffff;
+}
+
+.dashboard-container.dark .action-card:hover {
+  background-color: #ff6b6b;
+  color: #ffffff;
+}
+.dashboard-container.dark .stat-card:hover {
+  background-color: #ff6b6b;
+  color: #ffffff;
+}
+
+.action-icon {
+  color: #ff6b6b;
+  transition: color 0.3s ease;
+}
+
+.action-card:hover .action-icon {
+  color: #ffffff;
+}
+
+.action-card h3 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: inherit;
+}
+
+.action-card p {
+  margin-top: 10px;
+  color: inherit;
+}
+
+/* Modal Styling */
+.custom-modal .modal-content {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-container.dark .custom-modal .modal-content {
+  background-color: #2b2b2b;
+  color: #f0f0f0;
+}
+
+.custom-modal .modal-dialog {
+  max-width: 800px;
+}
+
+.custom-modal .modal-header {
+  border-bottom: none;
+  padding-bottom: 20px;
+  background-color: #f6f6f6;
+  border-radius: 20px 20px 0 0;
+}
+
+.dashboard-container.dark .custom-modal .modal-header {
+  background-color: #333;
+}
+
+.custom-modal .modal-title {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.dashboard-container.dark .custom-modal .modal-title {
+  color: #f0f0f0;
+}
+
+.custom-modal .modal-body {
+  padding: 20px 0;
+}
+
+.dashboard-container.dark .custom-modal .modal-body {
+  color: #cfcfcf;
+}
+
+.custom-modal .modal-footer {
+  border-top: none;
+  padding-top: 20px;
+  justify-content: center;
+}
+
+.custom-modal .modal-footer .btn-secondary {
+  background-color: #444;
+  color: #f0f0f0;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom-modal .modal-footer .btn-secondary:hover {
+  background-color: #555;
+}
+
+.custom-modal .modal-footer .btn {
+  padding: 10px 30px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.custom-modal .modal-footer .btn:hover {
+  background: linear-gradient(135deg, #ff7b72, #ff9800);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Cards */
+.modal-service-card, .modal-product-card {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.dashboard-container.dark .modal-service-card, 
+.dashboard-container.dark .modal-product-card {
+  background-color: #3a3a3a;
+}
+
+.modal-service-card:hover, .modal-product-card:hover {
+  background: linear-gradient(135deg, #ff7b72, #ff9800);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.modal-icon {
+  color: #ff6b6b;
+}
+
+.modal-service-card:hover .modal-icon {
+  color: #ffffff;
+}
+
+.dashboard-container.dark .modal-icon {
+  color: #ff6b6b;
+}
+
+.modal-service-card h5, .modal-product-card h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.modal-service-card p, .modal-product-card p {
+  margin: 5px 0 0 0;
+  color: #555;
+}
+
+.dashboard-container.dark .modal-service-card p, 
+.dashboard-container.dark .modal-product-card p {
+  color: #ccc;
+}
+
+/* Animations */
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-modal.show .modal-content {
+  animation: fadeInModal 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .dashboard-title {
+      font-size: 2.5rem;
+  }
+
+  .stat-card {
+      padding: 20px 15px;
+  }
+
+  .action-card {
+      padding: 30px 15px;
+  }
+
+  .custom-modal .modal-dialog {
+      max-width: 90%;
+  }
+
+  .modal-service-card, .modal-product-card {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .modal-service-card img, .modal-product-card img {
+      width: 100%;
+      height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-title {
+      font-size: 2rem;
+  }
+
+  .stat-card {
+      padding: 15px 10px;
+  }
+
+  .action-card {
+      padding: 25px 10px;
+  }
+
+  .stat-card h3, .action-card h3 {
+      font-size: 1.3rem;
+  }
+
+  .stat-card p, .action-card p {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-title {
+      font-size: 1.8rem;
+  }
+
+  .stat-card {
+      padding: 10px 5px;
+  }
+
+  .action-card {
+      padding: 20px 5px;
+  }
+
+  .stat-card h3, .action-card h3 {
+      font-size: 1.1rem;
+  }
+
+  .stat-card p, .action-card p {
+      font-size: 0.8rem;
+  }
+
+  .custom-modal .modal-content {
+      padding: 20px;
+  }
+
+  .custom-modal .modal-footer .btn {
+      padding: 8px 20px;
+      font-size: 0.9rem;
+  }
+}

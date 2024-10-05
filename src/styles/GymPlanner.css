@@ -1,0 +1,294 @@
+/* src/components/GymPlanner/GymPlanner.css */
+
+.gym-planner-container {
+  padding: 100px 20px 40px 20px; /* Top padding accounts for fixed Navbar */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.planner-title {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.gender-toggle {
+  display: flex;
+  gap: 30px;
+}
+
+.gender-button {
+  background-color: #ffffff;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.gender-button.active {
+  border: 2px solid #ff6b6b;
+  box-shadow: 0 6px 15px rgba(255, 107, 107, 0.3);
+}
+
+.gender-button:hover {
+  background-color: #ffe6e6;
+}
+
+.gender-button span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+.day-icons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.day-icon {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  width: 80px;
+}
+
+.day-icon.active {
+  background-color: #ff6b6b;
+  color: #ffffff;
+  box-shadow: 0 6px 15px rgba(255, 107, 107, 0.3);
+}
+
+.day-icon span {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: inherit;
+}
+
+.table-container {
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 50px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.table-container h2 {
+  color: #333333;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.exercise-table {
+  background-color: transparent;
+}
+
+.exercise-table thead {
+  background-color: #ff6b6b;
+  color: #ffffff;
+  border-bottom: 2px solid #ff6b6b;
+}
+
+.exercise-table th, .exercise-table td {
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+.exercise-table tbody tr.completed-row {
+  background-color: #e6ffe6;
+}
+
+.exercise-table tbody tr:hover {
+  background-color: #ffe6e6;
+  transition: background-color 0.3s ease;
+}
+
+.progress-chart-container {
+  width: 100%;
+  max-width: 1000px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.progress-chart-container h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333333;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.progress-chart {
+  width: 100%;
+  height: 400px;
+}
+
+.completed-row td {
+  background-color: #d4edda !important;
+}
+
+@media (max-width: 992px) {
+  .planner-title {
+    font-size: 2.5rem;
+  }
+
+  .gender-toggle {
+    gap: 20px;
+  }
+
+  .gender-button {
+    padding: 12px 20px;
+    gap: 10px;
+  }
+
+  .day-icon {
+    width: 70px;
+    padding: 15px 20px;
+  }
+
+  .day-icon span {
+    font-size: 0.9rem;
+  }
+
+  .table-container, .progress-chart-container {
+    padding: 20px;
+  }
+
+  .exercise-table thead {
+    font-size: 0.95rem;
+  }
+
+  .exercise-table th, .exercise-table td {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .planner-title {
+    font-size: 2rem;
+  }
+
+  .gender-toggle {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gender-button {
+    width: 150px;
+    justify-content: center;
+  }
+
+  .day-icon {
+    width: 60px;
+    padding: 12px 15px;
+  }
+
+  .day-icon span {
+    font-size: 0.8rem;
+  }
+
+  .exercise-table thead {
+    font-size: 0.9rem;
+  }
+
+  .exercise-table th, .exercise-table td {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+
+  .progress-chart {
+    height: 300px;
+  }
+}
+
+/* Dark Mode Styles */
+body.dark-mode .gym-planner-container {
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+}
+
+body.dark-mode .planner-title,
+body.dark-mode .gender-button span,
+body.dark-mode .day-icon span,
+body.dark-mode .table-container h2,
+body.dark-mode .progress-chart-container h3 {
+  color: #e0e0e0;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .gender-button {
+  background-color: #333333;
+  border: 2px solid transparent;
+}
+
+body.dark-mode .gender-button.active {
+  border: 2px solid #ff6b6b;
+  box-shadow: 0 6px 15px rgba(255, 107, 107, 0.5);
+}
+
+body.dark-mode .gender-button:hover {
+  background-color: #4d4d4d;
+}
+
+body.dark-mode .day-icon {
+  background-color: #333333;
+  color: #e0e0e0;
+}
+
+body.dark-mode .day-icon.active {
+  background-color: #ff6b6b;
+  color: #ffffff;
+}
+
+body.dark-mode .table-container {
+  background-color: rgba(50, 50, 50, 0.9);
+}
+
+body.dark-mode .exercise-table thead {
+  background-color: #ff6b6b;
+  color: #ffffff;
+}
+
+body.dark-mode .exercise-table tbody tr.completed-row {
+  background-color: #3cb371 !important;
+}
+
+body.dark-mode .exercise-table tbody tr:hover {
+  background-color: #ffb3b3;
+}
+
+body.dark-mode .progress-chart-container {
+  background-color: rgba(50, 50, 50, 0.9);
+}
+
+body.dark-mode .exercise-table td {
+  color: #f0f0f0;
+}
+
+body.dark-mode .exercise-table thead th {
+  color: #ffffff;
+}

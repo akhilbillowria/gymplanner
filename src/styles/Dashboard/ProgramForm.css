@@ -1,0 +1,129 @@
+/* src/components/ProgramGenerator/ProgramForm.css */
+
+.program-form {
+    display: flex;
+    flex-direction: column;
+    animation: fadeInUp 0.5s ease forwards;
+  }
+  
+  .program-form h3 {
+    margin-bottom: 30px;
+    color: #ff6b6b;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+    position: relative;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .checkbox-group label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+    color: #555;
+  }
+  
+  .checkbox-group input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .checkbox-group input:checked ~ span {
+    background-color: #ff6b6b;
+    border-color: #ff6b6b;
+  }
+  
+  .checkbox-group span {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    height: 20px;
+    width: 20px;
+    background-color: #f7f7f7;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .checkbox-group span::after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+  
+  .checkbox-group input:checked ~ span::after {
+    display: block;
+  }
+  
+  .checkbox-group span::after {
+    left: 5px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  input[type='number'],
+  select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type='number']:focus,
+  select:focus {
+    border-color: #ff6b6b;
+    outline: none;
+  }
+  
+  .generate-button {
+    background: linear-gradient(135deg, #ff6b6b, #f9d423);
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+    align-self: center;
+    width: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .generate-button:hover {
+    transform: translateY(-5px);
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

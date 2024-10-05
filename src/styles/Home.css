@@ -1,0 +1,357 @@
+/* src/styles/Home.css */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.home-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Carousel and Overlay Container */
+.carousel-overlay-container {
+  position: relative;
+  width: 100%;
+  height: 68vh; /* Adjust height as needed */
+  z-index: 1;
+}
+
+.background-carousel {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%; /* Make sure the image takes up the full width of the container */
+  height: auto; /* Automatically adjust the height based on the width */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  max-height: 500px; /* Add a maximum height to prevent the image from stretching too tall */
+  max-width: 100%; /* Prevents the image from exceeding the container's width */
+  border-radius: 10px; /* Optional: Add some rounding to make the carousel look modern */
+  margin: 0 auto; /* Center the image inside its container */
+}
+
+/* For larger screens */
+@media (min-width: 768px) {
+  .carousel-item img {
+    max-height: 600px; /* Increase the max height for larger screens */
+  }
+}
+
+/* For smaller screens */
+@media (max-width: 767px) {
+  .carousel-item img {
+    max-height: 300px; /* Limit the max height for smaller screens */
+    object-fit: contain; /* Change fit to 'contain' for better viewing on small screens */
+  }
+}
+
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2; /* Above the carousel */
+}
+
+.content {
+  color: white;
+  z-index: 3; /* Above the overlay */
+  max-width: 600px;
+  padding: 20px;
+}
+
+.content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* Gym Button */
+.gym-button {
+  position: relative;
+  padding: 15px 40px;
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ff5f6d, #ffc371);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(255, 95, 109, 0.75);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.gym-button:hover {
+  background: linear-gradient(90deg, #ff5f6d, #ff6a00);
+  box-shadow: 0 0 20px #ff6a00, 0 0 40px #ff6a00, 0 0 60px #ff6a00;
+  transform: scale(1.05);
+}
+
+/* Flame effect */
+.fire-flame {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.6);
+  height: 40px;
+  width: 5px;
+  bottom: 0;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%) translateY(100%) rotate(45deg);
+  animation: fire-animation 2s infinite;
+}
+
+.fire-flame:nth-child(2) {
+  left: 30%;
+  animation-delay: 0.3s;
+}
+
+.fire-flame:nth-child(3) {
+  left: 70%;
+  animation-delay: 0.6s;
+}
+
+.fire-flame:nth-child(4) {
+  left: 10%;
+  animation-delay: 0.9s;
+}
+
+@keyframes fire-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(100%) rotate(45deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-100%) rotate(45deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%) rotate(45deg);
+  }
+}
+
+/* Additional hover effects for the button */
+.gym-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: all 0.5s;
+}
+
+.gym-button:hover::before {
+  left: 100%;
+}
+
+.gym-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(255, 95, 109, 0.5), transparent);
+  transition: all 0.5s;
+}
+
+.gym-button:hover::after {
+  height: 0%;
+}
+
+/* Dashboard section */
+.dashboard-section {
+  padding: 50px 0;
+  background-color: #f9f9f9; /* Create separation from carousel */
+  position: relative;
+  z-index: 1; /* Ensure it appears after carousel */
+
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .carousel-overlay-container {
+    height: 60vh; /* Adjust height for smaller screens */
+  }
+
+  .gym-button {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .dashboard-section {
+    padding: 20px;
+  }
+
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content p {
+    font-size: 1.2rem;
+  }
+}
+
+/* src/styles/Home.css */
+
+/* ... existing styles ... */
+
+/* Carousel Overlay Container */
+.carousel-overlay-container {
+  position: relative;
+}
+
+/* Quote Carousel Styles */
+.quotes-carousel {
+  height: 100vh;
+}
+
+.quote-carousel-item {
+  height: 100vh;
+  background-color: #000;
+  position: relative;
+}
+
+.overlay-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-text {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto 20px;
+}
+
+.quote-author {
+  color: #ddd;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Overlay Content */
+.overlay .content {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.overlay .gym-button {
+  position: relative;
+  display: inline-block;
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.overlay .gym-button:hover {
+  background-color: #ff4b4b;
+}
+
+/* Fire Flame Animations */
+.fire-flame {
+  position: absolute;
+  background-color: #ff6b6b;
+  width: 10px;
+  height: 10px;
+  animation: flame 1s infinite;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.fire-flame:nth-child(1) {
+  top: -10px;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.fire-flame:nth-child(2) {
+  top: -10px;
+  right: 20%;
+  animation-delay: 0.2s;
+}
+
+.fire-flame:nth-child(3) {
+  top: -15px;
+  left: 50%;
+  animation-delay: 0.4s;
+}
+
+.fire-flame:nth-child(4) {
+  top: -20px;
+  right: 50%;
+  animation-delay: 0.6s;
+}
+
+@keyframes flame {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .quote-text {
+    font-size: 1.8rem;
+  }
+
+  .quote-author {
+    font-size: 1.2rem;
+  }
+
+  .overlay .gym-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+

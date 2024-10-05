@@ -1,0 +1,43 @@
+/* src/styles/YogaPants/FAQs.css */
+.faqs {
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.faqs h2 {
+    font-size: 2rem; /* Larger title */
+    color: #333; /* Dark text color */
+    margin-bottom: 15px; /* Spacing below title */
+}
+
+.faq-item {
+    margin-bottom: 10px; /* Space between FAQs */
+    padding: 10px; /* Padding for the FAQ item */
+    border-bottom: 1px solid #ddd; /* Divider line */
+}
+
+.faq-item h4 {
+    font-weight: bold; /* Bold question text */
+}
+
+.faq-item p {
+    margin: 5px 0; /* Spacing for answers */
+    color: #666; /* Lighter color for answers */
+}
+
+@media (max-width: 768px) {
+    .faqs {
+        padding: 10px; /* Less padding on mobile */
+    }
+    
+    .faqs h2 {
+        font-size: 1.5rem; /* Smaller title */
+    }
+    
+    .faq-item {
+        padding: 5px; /* Less padding in FAQ items */
+    }
+}

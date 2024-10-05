@@ -1,0 +1,292 @@
+/* src/styles/Diet/DietPlan.css */
+
+/* --------------------------------------------
+   1. Root Variables for Consistent Styling
+--------------------------------------------- */
+
+:root {
+  --primary-color: #ff6b6b;
+  --secondary-color: #4caf50;
+  --background-color: #f0f4f8;
+  --card-background: #ffffff;
+  --text-color: #333333;
+  --border-radius: 10px;
+  --transition-speed: 0.3s;
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --------------------------------------------
+   2. General Styles
+--------------------------------------------- */
+
+.diet-plan-container {
+  position: relative;
+  padding: 80px 20px;
+  background-color: var(--background-color);
+  min-height: 100vh;
+  font-family: var(--font-family);
+  color: var(--text-color);
+}
+
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  animation: fadeInDown 1s ease-out;
+}
+
+/* --------------------------------------------
+   3. Floating Calculator Button
+--------------------------------------------- */
+
+.calculator-button-container {
+  position: fixed;
+  top: 80px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.calculator-button-container .btn {
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.calculator-button-container .btn:hover {
+  background-color: #ff4c4c;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --------------------------------------------
+   4. Switch Containers
+--------------------------------------------- */
+
+.switch-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.switch-container .btn-group {
+  display: flex;
+}
+
+.switch-container .btn {
+  flex: 1;
+  margin: 0 5px;
+  font-size: 1rem;
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.switch-container .btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* Active Button Styles */
+.switch-container .btn-primary.active,
+.switch-container .btn-danger.active,
+.switch-container .btn-success.active,
+.switch-container .btn-warning.active,
+.switch-container .btn-info.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+}
+
+/* --------------------------------------------
+   5. Weekday Buttons
+--------------------------------------------- */
+
+.weekday-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.weekday-button {
+  margin: 5px;
+  font-size: 1rem;
+  border-radius: var(--border-radius);
+  padding: 10px 15px;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.weekday-button:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.weekday-button.active,
+.weekday-button:active {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+/* --------------------------------------------
+   6. Diet Plan Display
+--------------------------------------------- */
+
+.diet-plan-display {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.diet-plan-display .card {
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.diet-plan-display .card-header {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.diet-plan-display .meal-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.diet-plan-display .meal-item:last-child {
+  border-bottom: none;
+}
+
+.diet-plan-display .meal-item h5 {
+  font-weight: 600;
+  color: #444;
+}
+
+.diet-plan-display .meal-description {
+  color: #555;
+}
+
+.diet-plan-display .meal-item p {
+  color: #777;
+}
+
+/* --------------------------------------------
+   7. Responsive Design
+--------------------------------------------- */
+
+@media (max-width: 992px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .calculator-button-container {
+    top: 70px;
+    right: 20px;
+  }
+
+  .switch-container .btn {
+    font-size: 0.9rem;
+  }
+
+  .weekday-button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .calculator-button-container {
+    top: 60px;
+    right: 15px;
+  }
+
+  .switch-container .btn {
+    font-size: 0.85rem;
+  }
+
+  .weekday-button {
+    font-size: 0.85rem;
+    padding: 7px 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .calculator-button-container {
+    top: 50px;
+    right: 10px;
+  }
+
+  .switch-container .btn {
+    font-size: 0.8rem;
+  }
+
+  .weekday-button {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+}
+
+/* --------------------------------------------
+   8. Animations and Keyframes
+--------------------------------------------- */
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------
+   9. Modal Styling (Optional Enhancements)
+--------------------------------------------- */
+
+.modal-content {
+  border-radius: var(--border-radius);
+}
+
+.modal-header {
+  background-color: var(--primary-color);
+  color: #fff;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+/* --------------------------------------------
+   10. Scrollbar Styling (Optional)
+--------------------------------------------- */
+
+.diet-plan-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.diet-plan-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.diet-plan-container::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
+
+.diet-plan-container::-webkit-scrollbar-thumb:hover {
+  background: #ff4c4c;
+}

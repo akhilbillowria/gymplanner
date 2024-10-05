@@ -1,0 +1,42 @@
+/* src/ProductCarousel.css */
+.product-carousel {
+    margin: 20px 0;
+}
+
+.product-carousel img {
+    height: 400px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures the image covers the area */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.product-carousel img:hover {
+    transform: scale(1.05); /* Slightly zooms in on hover */
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.carousel-caption h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff; /* White color for contrast */
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    color: #fff; /* White color for contrast */
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #FFD700; /* Gold color for price */
+}
+
+.button {
+    border-radius: 5px;
+}

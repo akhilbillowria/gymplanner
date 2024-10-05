@@ -1,0 +1,108 @@
+.customer-reviews {
+    width: 100%; /* Full width of the container */
+    max-width: 1200px; /* Max width to limit it on larger screens */
+    margin: 0 auto; /* Center align the reviews section */
+    padding: 40px 20px; /* Padding for spacing */
+    text-align: center; /* Center the text */
+}
+
+.customer-reviews h2 {
+    font-size: 2rem; /* Font size for the heading */
+    margin-bottom: 30px; /* Space below the heading */
+    color: #333; /* Dark color for the heading */
+}
+
+.review-card {
+    background-color: #fff; /* White background for cards */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    padding: 20px; /* Inner padding for content */
+    margin: 20px 20px; /* Spacing between cards */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+    position: relative; /* For positioning the overlay */
+}
+
+.review-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Darker shadow on hover */
+}
+
+.review-header {
+    display: flex; /* Flexbox for layout */
+    align-items: center; /* Center align items vertically */
+    margin-bottom: 10px; /* Space below the header */
+}
+
+.profile-pic {
+    width: 50px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    border-radius: 50%; /* Circular shape */
+    margin-right: 10px; /* Space between image and text */
+}
+
+
+.review-name {
+    font-size: 1.25rem; /* Font size for reviewer's name */
+    color: #555; /* Medium gray for the name */
+    margin: 0; /* Reset margin */
+}
+
+.review-rating {
+    font-size: 0.9rem; /* Smaller font for rating */
+    color: #777; /* Light gray for rating */
+    margin: 5px 0 0; /* Space above the rating */
+}
+
+.review-comment {
+    font-size: 1rem; /* Standard font size for comments */
+    color: #444; /* Darker gray for comments */
+    margin-top: 15px; /* Space above the comment */
+}
+
+/* Slick Carousel Dots */
+.slick-dots {
+    bottom: -30px; /* Positioning the dots below the carousel */
+}
+
+.slick-dots li button:before {
+    font-size: 12px; /* Font size for dots */
+    color: #bbb; /* Default dot color */
+}
+
+.slick-dots li.slick-active button:before {
+    color: #333; /* Active dot color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .review-card {
+        margin: 0 5px; /* Reduce margin on smaller screens */
+    }
+
+    .customer-reviews h2 {
+        font-size: 1.5rem; /* Smaller heading on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .review-card {
+        padding: 15px; /* Less padding on mobile */
+    }
+
+    .profile-pic {
+        width: 50px; /* Smaller profile picture */
+        height: 50px; /* Smaller profile picture */
+    }
+
+    .review-name {
+        font-size: 1rem; /* Smaller name font size */
+    }
+
+    .review-rating {
+        font-size: 0.8rem; /* Smaller rating font size */
+    }
+
+    .review-comment {
+        font-size: 0.9rem; /* Smaller comment font size */
+    }
+}

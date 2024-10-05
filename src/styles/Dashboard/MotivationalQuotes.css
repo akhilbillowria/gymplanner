@@ -1,0 +1,89 @@
+/* src/styles/Dashboard/MotivationalQuotes.css */
+
+.motivational-quotes-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.quote-card {
+    background: linear-gradient(135deg, #ff6b6b, #f9d423);
+    border-radius: 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    padding: 30px 40px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.quote-icon {
+    color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: -15px;
+    left: -15px;
+}
+
+.quote-text {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: 40px;
+    font-style: italic;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.quote-card:hover .quote-text {
+    color: #ffe6e6;
+}
+
+/* Dark Mode Support */
+body.dark-mode .quote-card {
+    background: linear-gradient(135deg, #4b79a1, #283e51);
+    box-shadow: 0 15px 25px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .quote-icon {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .quote-text {
+    color: #f0f0f0;
+}
+
+body.dark-mode .quote-card:hover .quote-text {
+    color: #d1d1d1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .quote-card {
+        padding: 20px 25px;
+    }
+
+    .quote-text {
+        font-size: 1.2rem;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote-card {
+        padding: 15px 20px;
+    }
+
+    .quote-text {
+        font-size: 1rem;
+        margin-top: 25px;
+    }
+
+    .quote-icon {
+        top: -10px;
+        left: -10px;
+        size: 1.5x;
+    }
+}
