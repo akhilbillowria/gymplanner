@@ -42,15 +42,15 @@
 
 .calculator-button-container {
   position: fixed;
-  top: 80px;
+  top: 180px;
   right: 30px;
-  z-index: 1000;
+  z-index: 5;
 }
 
 .calculator-button-container .btn {
-  border-radius: 50px;
+  border-radius: 20px;
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   background-color: var(--primary-color);
   border: none;
   color: #fff;
@@ -186,7 +186,7 @@
   }
 
   .calculator-button-container {
-    top: 70px;
+    top: 200px;
     right: 20px;
   }
 

@@ -1,5 +1,13 @@
 /* src/styles/Home/Testimonials.css */
-
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 11111111000; /* Ensure it's above other content */
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  backdrop-filter: blur(10px); /* Apply backdrop blur for a frosted glass effect */
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
 /* Testimonials Section */
 .testimonials-section {
     padding: 60px 20px;
