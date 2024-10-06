@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/akhilbillowria/gymplanner/static/css/main.8c8f7025.css",
+    "main.js": "/akhilbillowria/gymplanner/static/js/main.6ac38860.js",
+    "static/js/453.68693753.chunk.js": "/akhilbillowria/gymplanner/static/js/453.68693753.chunk.js",
+    "static/media/slick.svg": "/akhilbillowria/gymplanner/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/akhilbillowria/gymplanner/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/akhilbillowria/gymplanner/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/akhilbillowria/gymplanner/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/akhilbillowria/gymplanner/index.html",
+    "main.8c8f7025.css.map": "/akhilbillowria/gymplanner/static/css/main.8c8f7025.css.map",
+    "main.6ac38860.js.map": "/akhilbillowria/gymplanner/static/js/main.6ac38860.js.map",
+    "453.68693753.chunk.js.map": "/akhilbillowria/gymplanner/static/js/453.68693753.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8c8f7025.css",
+    "static/js/main.6ac38860.js"
+  ]
+}
