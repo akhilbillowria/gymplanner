@@ -6,6 +6,7 @@ import '../styles/CarouselWelcome.css';
 const CarouselWelcome = () => {
   const carouselImages = [
     'https://png.pngtree.com/thumb_back/fh260/back_our/20190628/ourmid/pngtree-carousel-map-image_279780.jpg',
+    'https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-80053.jpg?w=1060&t=st=1728242775~exp=1728243375~hmac=78711cdeaebba12ddad7229416328f3fa365dbcb3087057c833016fb0cc47415'
   ];
 
   return (

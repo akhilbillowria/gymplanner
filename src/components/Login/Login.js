@@ -1,9 +1,7 @@
-// src/components/Login/Login.js
-
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../../AuthContext';
 import { Link, useNavigate } from 'react-router-dom';
-import '../../styles/Signup.css';
+import '../../styles/Login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -13,25 +11,22 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  // Clear the login form when the component loads or refreshes
   useEffect(() => {
-    setEmail(''); // Clear email field
-    setPassword(''); // Clear password field
-    setError(''); // Clear any error message
+    setEmail('');
+    setPassword('');
+    setError('');
   }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       setError('');
       setLoading(true);
-      await login(email, password); // Use state values for email and password
-      navigate('/'); // Redirect to home page after successful login
+      await login(email, password);
+      navigate('/');
     } catch {
       setError('Failed to log in');
     }
-
     setLoading(false);
   };
 
@@ -40,24 +35,30 @@ const Login = () => {
       <h2 className="auth-header">Log In</h2>
       {error && <div className="auth-error">{error}</div>}
       <form className="auth-form" onSubmit={handleSubmit}>
-        <label>Email</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-
-        <label>Password</label>
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-
+        <div className="input-group">
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            placeholder=" "
+          />
+          <label htmlFor="email">Email</label>
+        </div>
+        <div className="input-group">
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            placeholder=" "
+          />
+          <label htmlFor="password">Password</label>
+        </div>
         <button disabled={loading} className="auth-button" type="submit">
-          Log In
+          {loading ? 'Logging in...' : 'Log In'}
         </button>
       </form>
       <div className="auth-footer">

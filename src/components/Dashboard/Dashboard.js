@@ -65,9 +65,9 @@ const Dashboard = () => {
                         <Card className="stat-card" onClick={() => { navigate('/exercises'); handleCloseProductsModal(); }}>
                             <Card.Body>
                                 <FontAwesomeIcon icon={faUsers} size="3x" className="stat-icon" />
-                                <Card.Title>Community Support</Card.Title>
+                                <Card.Title>Exercise Visuals</Card.Title>
                                 <Card.Text>
-                                    Join a community of fitness enthusiasts to stay motivated.
+                                    Enjoy  a vast library of exercise details and tutorials.
                                 </Card.Text>
                             </Card.Body>
                         </Card>
