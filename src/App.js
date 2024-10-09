@@ -19,9 +19,9 @@ import Exercises from './components/Exercises';
 function App() {
   return (
     <Router>
-              <Navbar /> {/* Navbar will have access to authentication state */}
 
       <AuthProvider> {/* Provides authentication context to the entire app */}
+      <Navbar /> {/* Navbar will have access to authentication state */}
         <div >
           <Routes>
             {/* Public Routes */}
@@ -55,8 +55,7 @@ function App() {
             } /> {/* Yoga Pants Page - Protected */}
 
             {/* Redirect any unknown routes to home or login based on authentication */}
-            <Route path="/diet-calculator" element={< DietCalculator/>} />
-            
+            <Route path="/diet-calculator" element={< DietCalculator/>} />    
               
            
             <Route path="/articles" element={<PrivateRoute><ArticlesPage /></PrivateRoute>} />
